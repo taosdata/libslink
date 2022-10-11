@@ -83,8 +83,7 @@ install: shared
 	     -e 's|@EXEC_PREFIX@|$(EXEC_PREFIX)|g' \
 	     -e 's|@LIBDIR@|$(LIBDIR)|g' \
 	     -e 's|@INCLUDEDIR@|$(PREFIX)/include|g' \
-	     -e 's|@VERSION@|$(FULL_VER)|g' \
-	     slink.pc.in > $(DESTDIR)$(LIBDIR)/pkgconfig/slink.pc
+	     -e 's|@VERSION@|$(FULL_VER)|g'
 	@mkdir -p $(DESTDIR)$(DOCDIR)/example
 	@cp -r example $(DESTDIR)$(DOCDIR)/
 
