@@ -224,7 +224,7 @@ sl_collect (SLCD *slconn, SLpacket **slpack)
 
       /* Stop processing if the buffer contains miniSEED but not enough data */
       if (slconn->stat->slpack.reclen == 0 ||
-          (slconn->stat->slpack.reclen > 0 && slconn->stat->slpack.reclen > bufferlen))
+          (slconn->stat->slpack.reclen > 0 && slconn->stat->slpack.reclen + SLHEADSIZE > bufferlen))
       {
         break;
       }
